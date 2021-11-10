@@ -1,0 +1,23 @@
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+   security:
+      enabled: false
+
+---
+spring:
+   config:
+      activate:
+         on-profile: dev
+server:
+   port: 8080
+   
+---
+spring:
+   config:
+      activate:
+         on-profile: test
+server:
+   port: 8081
